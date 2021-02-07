@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e0ded2;
+}
+
+.example {
+    position: absolute;
+    bottom: 0;
+}
+.app{
+
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: #e0ded2;
+    
+}
+
+.sampler {
+    width: 1037px;
+    height: 700px;
+    position: absolute;
+    background-image: url("./images/sampler.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: solid 1px red; */
+
+}
+
+.ruby-radio {
+    position: absolute;
+    height: 60px;
+    width: 227px;
+    top: 69px;
+    left: 190px;
+    background: #9ed9e4;
+    overflow: hidden;
+}
+
+.ruby-radio p {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    color: #59b34d;
+    font-size: 34px;
+    width: 350px;
+    font-family: 'VT323', monospace;
+    /* animation: slideshow 10s linear infinite; */
+
+}
+
+.p1 {
+    animation: slideshow 10s linear infinite;
+
+}
+
+.p2 {
+    animation-delay: 10s;
+    animation: slideshow-offset 10s linear infinite;
+}
+
+@keyframes slideshow {
+    0%    { left: 0px; }
+    100%  { left: -350px; }
+}
+
+@keyframes slideshow-offset {
+    0%    { left: 350px; }
+    100%  { left: 0px; }
+}
+
+
+/* color: #5cad2d; */
+/* #scrollbar-1 {
+    height: 100px;
+    background-color: $green;
+    position: relative;
+    overflow: hidden;
+    #scroll-text-1 {
+        font-family: "Agrandir-GrandMedium";
+        font-weight: 500;
+        color: $off-white;
+        font-size: 55px;
+        position: absolute;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 300%;
+        animation: slideshow 10s linear infinite;
+        text-align: center;
+    }
+} */
+.buttons {
+    position: absolute;
+    position: absolute;
+    background: #54666d;
+    right: 117px;
+    padding: 10px;
+    bottom: 24px;
+    width: 392px;
+    height: 402px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.button {
+    position: relative;
+    border-bottom: solid 4px #140f0c;
+    border-left: solid 2px #140f0c;
+    height: 78px;
+    width: 78px;
+    background: #514746;
+    color: white;
+}
+.button p {
+    position: absolute;
+    top: -20px;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.active {
+    border-bottom: solid 4px #5bb4f0;
+    border-left: solid 2px #5bb4f0;
+}
+
+.active 
