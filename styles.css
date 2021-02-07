@@ -26,7 +26,7 @@ body {
     width: 1037px;
     height: 700px;
     position: absolute;
-    background-image: url("./images/sampler.jpg");
+    background-image: url("./images/sampler_small.png");
     background-size: contain;
     background-repeat: no-repeat;
     /* border: solid 1px red; */
