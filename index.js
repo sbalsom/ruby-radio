@@ -4,14 +4,16 @@ const buttons = document.querySelectorAll('.button');
 const players = Array.from(sounds).map(sound => new Tone.Player(new Tone.Buffer(sound.src)).toDestination());
 const startButton = document.getElementById('start-button');
 
-players.forEach((player)=> {
-     player.loop = true;
-     player.mute = true;
- })
+
 
 
 startButton.addEventListener('click', () => {
-    console.log('clicked !')
+
+
+    players.forEach((player)=> {
+        player.loop = true;
+        player.mute = true;
+    });
     players.forEach((player) => {
         player.start();
     })
