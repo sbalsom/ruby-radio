@@ -4,41 +4,57 @@ body {
     margin: 0;
     padding: 0;
     background: #e0ded2;
+    overflow: hidden; 
 }
 
-.example {
-    position: absolute;
-    bottom: 0;
+.container {
+    position: relative;
 }
-.app{
 
+.overlay {
+    position:absolute;
     height: 100vh;
     width: 100vw;
-    margin: 0;
-    padding-top: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
-    background: #e0ded2;
-    
+    background-color: rgb(47 67 83 / 71%);
+    background-image: linear-gradient(315deg, #2f43539e 0%, #d2ccc4a6 74%);
+    top:0;
+    left: 0;
+    z-index: 1;
 }
 
-.sampler {
-    width: 1037px;
-    height: 700px;
-    position: absolute;
-    background-image: url("./images/sampler_small.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* border: solid 1px red; */
+.overlay-text {
+    font-family: monospace;
+    font-size: 70px;
+    text-align: center;
+    color: #4c9a42;
+    margin-top: 35vh;
+    text-shadow: 3px -1px 6px black;
 
+
+}
+
+.overlay-text:hover {
+    color: #24fa08;
+}
+
+
+/* if min height, have to also get other parts to stick */
+.sampler {
+    height: 100%;
+    top: 0;
+    width: auto;
+    left:0;
+    position: absolute;
+    min-height: 490px;
+  
 }
 
 .ruby-radio {
     position: absolute;
-    height: 60px;
-    width: 227px;
-    top: 69px;
-    left: 190px;
+    height: 9%;
+    width: 33vh;
+    top: 9.4%;
+    left: 26vh;
     background: #9ed9e4;
     overflow: hidden;
 }
@@ -51,7 +67,6 @@ body {
     font-size: 34px;
     width: 350px;
     font-family: 'VT323', monospace;
-    /* animation: slideshow 10s linear infinite; */
 
 }
 
@@ -75,50 +90,28 @@ body {
     100%  { left: 0px; }
 }
 
-
-/* color: #5cad2d; */
-/* #scrollbar-1 {
-    height: 100px;
-    background-color: $green;
-    position: relative;
-    overflow: hidden;
-    #scroll-text-1 {
-        font-family: "Agrandir-GrandMedium";
-        font-weight: 500;
-        color: $off-white;
-        font-size: 55px;
-        position: absolute;
-        margin: 0;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 300%;
-        animation: slideshow 10s linear infinite;
-        text-align: center;
-    }
-} */
 .buttons {
     position: absolute;
     position: absolute;
     background: #54666d;
-    right: 117px;
+    left: 73vh;
     padding: 10px;
-    bottom: 24px;
-    width: 392px;
-    height: 402px;
+    bottom: 3vh;
+    width: 55vh;
+    height: 58vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    grid-template-columns: 13vh 13vh 13vh 13vh;
+    grid-column-gap: 1vh;
+    grid-row-gap: 1vh;
 }
 
 .button {
     position: relative;
     border-bottom: solid 4px #140f0c;
     border-left: solid 2px #140f0c;
-    height: 78px;
-    width: 78px;
+    height: 12vh;
+    width: 12vh;
     background: #514746;
     color: white;
 }
@@ -134,4 +127,27 @@ body {
     border-left: solid 2px #5bb4f0;
 }
 
-.active 
+
+/* .example {
+    position: absolute;
+    bottom: 0;
+} */
+/* .app{
+
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: #e0ded2;   
+} */
+
+/* old sampler style */
+  /* background-image: url("./images/sampler_small.png");
+    background-size: contain;
+    background-repeat: no-repeat; */
+    /* left: 50%; */
+    /* margin-left: -50%; */
+    
+    /* margin-top: -50vh; */

@@ -1,44 +1,40 @@
-// const { Tone } = require("tone/build/esm/core/Tone");
-
 const sounds = document.querySelectorAll('.sound');
 const buttons = document.querySelectorAll('.button');
 const players = Array.from(sounds).map(sound => new Tone.Player(new Tone.Buffer(sound.src)).toDestination());
 const startButton = document.getElementById('start-button');
-
-
-
+const overlay = document.getElementById('overlay');
 
 startButton.addEventListener('click', async () => {
 
     await Tone.start()
     
-    console.log('started tone')
-
-    console.log(Tone.now())
-    players.forEach((player)=> {
-        player.loop = true;
-        player.mute = true;
+    Tone.loaded().then(() => {
+        players.forEach((player)=> {
+            player.loop = true;
+            player.mute = true;
+        });
+        players.forEach((player) => {
+            
+            player.start();
+            player.sync();
+        })
+        
     });
-    players.forEach((player) => {
-        player.sync();
-        player.start();
-    })
-    Tone.Transport.bpm = 300
+    
+    Tone.Transport.bpm.value = 120
     Tone.Transport.start();
-    console.log(Tone.now());
-
+    startButton.remove();
+    overlay.remove();
 });
 
 buttons.forEach((button, index) => { 
     button.addEventListener('click', () => {
-        console.log(`clicked button number ${index}`)
         let player = players[index]
         button.classList.toggle('active')
         if (player.mute == true) {
             player.mute = false;
         } else if (player.mute == false) {
             player.mute = true;
-        }
-                           
+        }                  
     });
 });
