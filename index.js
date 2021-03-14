@@ -23,9 +23,10 @@ startButton.addEventListener('click', async () => {
     
     Tone.Transport.bpm.value = 120
     Tone.Transport.start();
+    overlay.classList.toggle('fade');
     startButton.remove();
-    overlay.remove();
-});
+    setTimeout(() => {  overlay.remove(); }, 1000);
+})
 
 buttons.forEach((button, index) => { 
     button.addEventListener('click', () => {
